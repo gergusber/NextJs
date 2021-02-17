@@ -14,7 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^5.0.0-beta2",
     "gray-matter": "^4.0.2",
+    "i": "^0.3.6",
     "moment": "^2.29.1",
     "next": "^10.0.6",
     "react": "^17.0.1",
