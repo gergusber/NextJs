@@ -5,7 +5,6 @@ import UserCard from "./user-card";
 function UserCardList({ users }) {
     return (
         <div>
-
             <ul className="list-group">
                 {users.map((user) => (
                     <li key={user.id} className="list-group-item">
