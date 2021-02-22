@@ -12,14 +12,13 @@ const RepositoriesItem = ({ repositories }) => {
                     </li>
                 ))}
             </ul>
-            {/* <style jsx>{`
-                        .list-group {
-                            max-height: 500px;
-                            margin-bottom: 10px;
-                            overflow:scroll;
-                            -webkit-overflow-scrolling: touch;
+            <style jsx>{`
+                .list-group {
+                            list-style: none;
+                            display:grid;
+                            grid-template-columns: auto auto auto;
                         }
-                        `}</style> */}
+                        `}</style>
         </div>
 
     );
