@@ -7,25 +7,30 @@ function UserCardList({ users }) {
     console.log(users)
     return (
         <div>
-            <ul className="list-group">
-                {users.map((user) => (
-                    <li key={user.id} className="list-group-item">
-                        <Link href={`/users/${user.login}`}>
-                            <a>
-                                <UserCard name={user.login} image={user.avatar_url} />
-                            </a>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-            {/* <style jsx>{`
+            <div className="">
+                <ul className="list-group">
+                    {users.map((user) => (
+                        <li key={user.id} className="col-5">
+                            <Link href={`/users/${user.login}`}>
+                                <a>
+                                    <UserCard name={user.login} image={user.avatar_url} />
+                                </a>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <style jsx>{`
                         .list-group {
-                            max-height: 500px;
-                            margin-bottom: 10px;
-                            overflow:scroll;
-                            -webkit-overflow-scrolling: touch;
+                            list-style: none;
+                            display:grid;
+                            grid-template-columns: auto auto auto auto;
+
                         }
-                        `}</style> */}
+                        .li{
+                        }
+                        `}</style>
         </div>
 
     );

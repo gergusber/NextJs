@@ -11,20 +11,29 @@ function UserPage({ user, repos }) {
     const isFallback = router.isFallback;
     console.log(repos);
     const userCreated = moment(user.created_at).format("DD-MM-YYYY")
-
+    const userSomething = user != null;
     if (isFallback) {
         return <span>Loading...</span>;
     }
     return (
+
         <div className="container">
-            <div className="row">
-                <div className="col">
+            <div className="list-group">
+                <div className="">
                     <UserCardItem user={user} />
                 </div>
-                <div className="col">
+                <div className="">
                     <RepositoriesItem repositories={repos} />
                 </div>
             </div>
+
+            <style jsx>{`
+                .list-group {
+                            display:grid;
+                            grid-template-columns: auto auto;
+                        }
+                        `}</style>
+
         </div>
     );
 }
